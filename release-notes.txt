@@ -1,0 +1,9 @@
+1.1:
+ -added .Values check to boolean, number, date and regexp
+ -added function type
+ -fixed bug that a false bool would be seen as non existing attribute
+ -nicer Error output
+ -added null support
+
+1.0:
+ -initial
