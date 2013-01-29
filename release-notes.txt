@@ -1,3 +1,7 @@
+1.3:
+ -custom error messages
+ -parent info in error messages
+
 1.2:
  -fixed optional & condition clash bug
  -moved optional & condition from object.element to element so optional and condition are available on every type
