@@ -1,3 +1,7 @@
+1.4:
+ -added Validate attribute
+ -added MultiType type
+
 1.3:
  -custom error messages
  -parent info in error messages
