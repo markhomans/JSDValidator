@@ -1,6 +1,6 @@
 # [JSDValidator](http://www.jsdvalidator.com/)
 
-* Does for JavaScript what XSD does for XML
+*Does for JavaScript what XSD does for XML*
 
 JSD stands for Javascript Schema Definition. It defines how a javascript object/variable should be formed. The JSD Validator takes a Javascript object and tests if it's valid according to the schema. It is basically a dimmed down version of what XSD does for XML.
 
