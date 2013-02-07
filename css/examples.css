@@ -1,0 +1,42 @@
+body
+{
+    padding-top: 40px;
+}
+.test_definition
+{
+    background-color: transparent!important;
+}
+.test_description
+{
+    max-width: 300px;
+}
+.badge-image
+{
+    padding-left:4px;
+    padding-right:4px;
+}
+
+.test .test_description
+{
+    width: 200px;
+}
+.test .test_schema
+{
+    width: 286px;
+}
+.test .test_input
+{
+    width: 286px;
+}
+.test .test_result
+{
+    width: 50px;
+}
+.test .test_expected
+{
+    width: 50px;
+}
+.test .test_actions
+{
+    width: 150px;
+}

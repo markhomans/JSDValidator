@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSDValidator . Examples</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="google-code-prettify/prettify.js"></script>
+        <script src="JSDValidator.js"></script>
+        <script src="js/examples.js"></script>
+        <script src="js/jsd_tests.js"></script>
+        <script>
+            function init()
+			{
+				var body = document.getElementsByTagName('body')[0];
+				body.onmousemove = anim;
+			}
+			
+			function anim(e){
+				var x;
+				if (e.pageX)
+				  x = e.pageX;
+				else
+				  x = e.clientX;		
+				var data = document.getElementById("logoAnim");
+				data.style.textIndent = "-" + (x /10) % 35 + "px";
+			}
+			if(navigator.appVersion.indexOf("MSIE")==-1 || navigator.appVersion.split("MSIE")[1] >8)
+				window.onload = init;
+        </script>
+        <script type="text/javascript">
+
+           var _gaq = _gaq || [];
+           _gaq.push(['_setAccount', 'UA-25440378-1']);
+           _gaq.push(['_trackPageview']);
+
+           (function()
+           {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+           })();
+
+        </script>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="google-code-prettify/prettify.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/examples.css" rel="stylesheet">
+    </head>
+    <body data-spy="scroll" data-target=".jsdv-sidebar" data-offset="0" style='padding-top: 80px;'>
+        
+        <!--HEADER-->
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner" style='height:40px'>
+                <div class='container'>
+                    <a class="brand pull-right" href="#">
+                        <div id="logo" class="logo_disk">
+                            <div class="etiket"></div>
+                            <div class="circle"></div>
+                            <div id="logoAnim" class="oval">10101010</div>
+                        </div>
+                    </a>
+                    <ul id='nav-categories' class="nav" style='margin-left:50px'>
+                        
+                        <li>
+                            <a href='http://build-software.nl/JSDValidator'>Home</a>
+                        </li>
+                        
+                        <li>
+                            <a href='http://build-software.nl/JSDValidator/JSDSchema'>JSD Schema</a>
+                        </li>
+                        
+                        <li>
+                            <a href='http://build-software.nl/JSDValidator/validator'>JSD Validator</a>
+                        </li>
+                        
+                        <li class="active">
+                            <a href='http://build-software.nl/JSDValidator/examples'>Examples</a>
+                        </li>
+                        <li>
+                            <a href='http://build-software.nl/JSDValidator/JSDGenerator'>JSD Generator</a>
+                        </li>
+                         <li>
+                            <a href='http://build-software.nl/JSDValidator/download'>Download</a>
+                        </li>
+                    </ul>
+                    <ul id='nav-actions' class='nav pull-right'>
+                        <li style='width:250px'>
+                            
+                            <label class="checkbox navbar-text" title="when in google chrome with the Developer Tools open, the debugger will break just before each test is run when this checkbox is on">
+                                <input type="checkbox" id="cbx_break_on_run" style='margin-top: 14px;'/>
+                                break before running test
+                            </label>
+                            
+                        </li>
+                        <li>
+                            <button id='btn_run_all_tests' class='btn btn-primary' type='button'>Run all tests</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+        </div>
+        <!--/HEADER-->
+        
+        <div class='container' style='width:90%'>
+            <div class='row-fluid'>
+
+                <div class='span2 jsdv-sidebar'>
+                    <ul id='nav-jsd-categories' class="nav nav-list jsdv-sidenav affix" style='margin-top:0px'> 
+                                            
+                    </ul>
+                    
+                </div>
+                
+                <div class='span9' id='tests-container'>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <p>Built by Mark Homans, <a href='http://www.build-software.nl'>Build Software</a></p>
+                <p>Code licensed under <a href="http://www.freebsd.org/copyright/freebsd-license.html" target="_blank">FreeBSD</a>
+            </div>
+        </footer>
+
+    </body>
+</html>
