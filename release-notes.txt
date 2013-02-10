@@ -1,3 +1,7 @@
+1.5:
+ -added integer attribute to number type
+ -completed the ValidateSchema function
+
 1.4:
  -added Validate attribute
  -added MultiType type

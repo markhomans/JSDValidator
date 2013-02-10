@@ -1,5 +1,5 @@
 /*!
- * JSD Validator v1.1
+ * JSD Validator v1.2
  * http://www.build-software.nl/JSDValidator/
  *
  * Copyright 2013 Build-Software
@@ -16,7 +16,7 @@ function JSDValidator(options)
     this.SetSchema = function(jsd_schema)
     {
         main_schema = jsd_schema;
-    }
+    };
     this.Validate = function(obj)
     {
         if(typeof JSON !== 'object')
@@ -27,7 +27,7 @@ function JSDValidator(options)
         _this.Error = null;
         
         return test(obj, main_schema);
-    }
+    };
     this.ValidateSchema = function(jsd_schema)
     {
         valid_schema = false;
@@ -42,7 +42,7 @@ function JSDValidator(options)
         valid_schema = testSchema(jsd_schema);
         return valid_schema;
             
-    }
+    };
     var test = function(obj, schema, parent_obj)
     {
         //if no schema provided, use the main schema
@@ -109,7 +109,7 @@ function JSDValidator(options)
             }
         }
         return true;
-    }
+    };
     
     var testString = function(string, schema)
     {
@@ -144,7 +144,7 @@ function JSDValidator(options)
             }
         }
         return true;
-    }
+    };
     
     var testNumber = function(num, schema)
     {
@@ -179,7 +179,7 @@ function JSDValidator(options)
             }
         }
         return true;
-    }
+    };
     
     var testBoolean = function(bool, schema)
     {
@@ -208,7 +208,7 @@ function JSDValidator(options)
             }
         }
         return true;
-    }
+    };
     var testDate = function(date, schema)
     {
         if(!(date instanceof Date))
@@ -241,7 +241,7 @@ function JSDValidator(options)
             }
         }
         return true;
-    }
+    };
     var testArray = function(array, schema)
     {
         if(!(array instanceof Array))
@@ -287,7 +287,7 @@ function JSDValidator(options)
             _this.Error=null;
         }
         return true;
-    }
+    };
     
     var testObject = function(object, schema)
     {
@@ -364,7 +364,7 @@ function JSDValidator(options)
         }
         
         return true;
-    }
+    };
     
     var testRegExp = function(regexp, schema)
     {
@@ -394,14 +394,14 @@ function JSDValidator(options)
             }
         }
         return true;
-    }
+    };
     var testFunction = function(func, schema)
     {
         if(! ( func instanceof Function))
             return returnFalse("Object is not a function ['"+func.toString()+"']");
             
         return true;
-    }
+    };
     var testSchema = function(schema)
     {
         var jsd_schema =
@@ -495,14 +495,14 @@ function JSDValidator(options)
         if(result)
             return true;
         return returnFalse(jsd.Error);
-    }
+    };
     
     var returnFalse = function(message)
     {
         if(!_this.Error)
             _this.Error = message;
         return false;
-    }
+    };
     var _this = this;
     var main_schema = undefined;
     var valid_schema = true;

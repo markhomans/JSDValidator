@@ -233,6 +233,24 @@ tests = tests.concat(
     },
     {
         Category: "Numbers",
+        Description: "Integers",
+        Schema: { Type: "Number", Integer: true},
+        Inputs:
+        [
+            {
+                Id:i++,
+                Input: 10,
+                ExpectedResult: true
+            },
+            {
+                Id:i++,
+                Input: 10.5,
+                ExpectedResult: false
+            }
+        ]
+    },
+    {
+        Category: "Numbers",
         Description: "Only get even numbers",
         Schema: 
         { 
@@ -965,6 +983,12 @@ var jsd_company =\n\
                 Id:i++,
                 Input: 
                 { Type: "String", Max:100},
+                ExpectedResult: false
+            },
+            {
+                Id:i++,
+                Input: 
+                { Type: "String", MaxLength:10.5},
                 ExpectedResult: false
             }
         ],
